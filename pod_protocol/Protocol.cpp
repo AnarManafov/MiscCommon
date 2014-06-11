@@ -120,7 +120,7 @@ CProtocol::EStatus_t CProtocol::read( int _socket )
             if( EAGAIN == errno || EWOULDBLOCK == errno )
                 return stAGAIN;
 
-            throw system_error( "Error occurred while reading protocol message." );
+            throw MiscCommon::system_error( "Error occurred while reading protocol message." );
         }
 
         copy( tmp_buf.begin(), tmp_buf.begin() + bytes_read,

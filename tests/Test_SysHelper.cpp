@@ -145,7 +145,7 @@ BOOST_AUTO_TEST_CASE( test_file_size0 )
 BOOST_AUTO_TEST_CASE( test_file_size1 )
 {
     const string filename( "missing_file.txt" );
-    BOOST_CHECK_THROW( file_size( filename ), system_error );
+    BOOST_CHECK_THROW( file_size( filename ), MiscCommon::system_error );
 }
 //=============================================================================
 BOOST_AUTO_TEST_SUITE_END();
